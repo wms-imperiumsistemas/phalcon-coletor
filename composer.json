@@ -1,0 +1,17 @@
+{
+    "name": "tarci/coletor",
+    "require": {
+        "phalcon/devtools": "^3.4"
+    },
+    "authors": [
+        {
+            "name": "tarcisiocms",
+            "email": "tarcisiocms@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {
+            "Library\\" : "/../app/library"
+        }
+    }
+}
