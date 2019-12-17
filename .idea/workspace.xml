@@ -1,73 +1,793 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="" />
+    <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/library/Barcode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/library/ConnectorOracle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/library/Math.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/AbstractService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/ConferenciaService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/coletor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/coletor.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ControllerBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ControllerBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/conferencia/executar.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/conferencia/index.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/c__wamp64_www_coletor_app_views_conferencia_index.volt.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/phalcon" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/phalcon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/.github/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/bootstrap/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/bootstrap/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/box.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/box.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/build/BuildPharDockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/build/BuildPharDockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/codeception.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/codeception.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/ide/gen-stubs.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/ide/gen-stubs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/ide/phpstorm/phalcon.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/ide/phpstorm/phalcon.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon-completion.bash" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon-completion.bash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phalcon.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phpcs.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phpcs.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/phpstan.neon" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/phpstan.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/AdminLTE.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/AdminLTE.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/AdminLTE.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/_all-skins.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/_all-skins.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-black-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-black-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-black.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-blue-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-blue-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-green-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-green-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-green.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-purple-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-purple-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-red-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-red-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-red.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-yellow-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-yellow-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-yellow.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/css/skins/skin-yellow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/admin-lte/js/app.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/comment/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/comment/comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/comment/continuecomment.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/comment/continuecomment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/dialog/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/dialog/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/dialog/dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/dialog/dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/fullscreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/fullscreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/fullscreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/fullscreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/panel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/placeholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/placeholder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/rulers.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/display/rulers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/closebrackets.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/closebrackets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/closetag.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/closetag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/continuelist.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/continuelist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/matchbrackets.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/matchtags.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/matchtags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/trailingspace.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/edit/trailingspace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/brace-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/brace-fold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/comment-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/comment-fold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldgutter.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldgutter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldgutter.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/foldgutter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/indent-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/indent-fold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/markdown-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/xml-fold.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/fold/xml-fold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/anyword-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/css-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/css-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/html-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/html-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/javascript-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/show-hint.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/show-hint.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/show-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/show-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/sql-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/sql-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/xml-hint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/hint/xml-hint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/coffeescript-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/css-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/css-lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/javascript-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/json-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/json-lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/lint.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/lint.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/yaml-lint.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/merge/merge.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/merge/merge.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/merge/merge.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/merge/merge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/loadmode.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/loadmode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/multiplex.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/multiplex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/multiplex_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/overlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/overlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/simple.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/mode/simple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/colorize.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/colorize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode-standalone.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode.node.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/annotatescrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/scrollpastend.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/simplescrollbars.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/simplescrollbars.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/simplescrollbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/match-highlighter.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/match-highlighter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/matchesonscrollbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/matchesonscrollbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/matchesonscrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/searchcursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/search/searchcursor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/active-line.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/active-line.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/mark-selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/mark-selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/selection-pointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/tern.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/tern.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/tern.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/tern.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/tern/worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/wrap/hardwrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/emacs.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/emacs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/sublime.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/sublime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/vim.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/keymap/vim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codemirror.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codemirror.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codemirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codephalcon.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codephalcon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codephalcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/lib/codephalcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/apl/apl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/apl/apl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/apl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/apl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asciiarmor/asciiarmor.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asciiarmor/asciiarmor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asciiarmor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asciiarmor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asn.1/asn.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asn.1/asn.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asn.1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asn.1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asterisk/asterisk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asterisk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/asterisk/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/clike.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/clike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clike/scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clojure/clojure.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clojure/clojure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clojure/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/clojure/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cmake/cmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cmake/cmake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cmake/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cmake/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cobol/cobol.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cobol/cobol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cobol/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cobol/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/coffeescript/coffeescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/coffeescript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/coffeescript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/commonlisp/commonlisp.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/commonlisp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/commonlisp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/css.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/less.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/less.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/less_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/less_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/scss.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/scss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/scss_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/scss_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/css/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cypher/cypher.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cypher/cypher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cypher/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/cypher/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/d/d.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/d/d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/d/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/d/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dart/dart.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dart/dart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dart/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/diff/diff.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/diff/diff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/diff/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/diff/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/django/django.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/django/django.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/django/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/django/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dockerfile/dockerfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dockerfile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dockerfile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dtd/dtd.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dtd/dtd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dtd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dtd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dylan/dylan.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dylan/dylan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dylan/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/dylan/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ebnf/ebnf.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ebnf/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ebnf/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ecl/ecl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ecl/ecl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ecl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ecl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/eiffel/eiffel.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/eiffel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/eiffel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/erlang/erlang.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/erlang/erlang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/erlang/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/erlang/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/forth/forth.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/forth/forth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/forth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/forth/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/fortran/fortran.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/fortran/fortran.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/fortran/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/fortran/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gas/gas.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gas/gas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gas/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/gfm.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/gfm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gfm/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gherkin/gherkin.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gherkin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/gherkin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/go/go.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/go/go.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/go/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/go/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/groovy/groovy.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/groovy/groovy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/groovy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/groovy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/haml.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/haml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haml/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/handlebars/handlebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/handlebars/handlebars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/handlebars/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/handlebars/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haskell/haskell.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haskell/haskell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haskell/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haskell/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haxe/haxe.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haxe/haxe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haxe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/haxe/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlembedded/htmlembedded.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlembedded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlembedded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlmixed/htmlmixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlmixed/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/htmlmixed/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/http/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/http/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/http/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/http/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/idl/idl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/idl/idl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/idl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/idl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jade/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jade/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jade/jade.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jade/jade.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/json-ld.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/json-ld.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/typescript.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/javascript/typescript.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jinja2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jinja2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jinja2/jinja2.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/julia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/julia/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/julia/julia.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/julia/julia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/kotlin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/kotlin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/kotlin/kotlin.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/kotlin/kotlin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/livescript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/livescript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/livescript/livescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/livescript/livescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/lua/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/lua/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/lua/lua.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/lua/lua.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/markdown/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mirc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mirc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mirc/mirc.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mirc/mirc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mllike/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mllike/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mllike/mllike.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mllike/mllike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/modelica/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/modelica/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/modelica/modelica.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/modelica/modelica.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mumps/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mumps/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mumps/mumps.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/mumps/mumps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/nginx/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/nginx/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/nginx/nginx.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/nginx/nginx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ntriples/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ntriples/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ntriples/ntriples.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/octave/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/octave/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/octave/octave.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/octave/octave.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pascal/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pascal/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pascal/pascal.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pascal/pascal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pegjs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pegjs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pegjs/pegjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/perl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/perl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/perl/perl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/perl/perl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/php.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/php.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/php/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pig/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pig/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pig/pig.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/pig/pig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/properties/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/properties/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/properties/properties.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/properties/properties.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/puppet/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/puppet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/puppet/puppet.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/puppet/puppet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/python/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/python/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/python/python.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/python/python.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/q/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/q/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/q/q.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/q/q.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/r/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/r/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/r/r.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/r/r.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/changes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/changes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/rpm.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rpm/rpm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rst/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rst/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rst/rst.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rst/rst.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/ruby.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/ruby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ruby/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rust/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rust/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rust/rust.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/rust/rust.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sass/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sass/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sass/sass.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sass/sass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/scheme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/scheme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/scheme/scheme.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/scheme/scheme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/shell.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/shell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/shell/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sieve/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sieve/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sieve/sieve.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sieve/sieve.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/slim/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smalltalk/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smalltalk/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smalltalk/smalltalk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smarty/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smarty/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smarty/smarty.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/smarty/smarty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/solr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/solr/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/solr/solr.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/solr/solr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/soy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/soy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/soy/soy.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/soy/soy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sparql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sparql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sparql/sparql.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sparql/sparql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/spreadsheet/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/spreadsheet/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/spreadsheet/spreadsheet.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sql/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sql/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sql/sql.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/sql/sql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/stex.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/stex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stex/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stylus/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stylus/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stylus/stylus.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/stylus/stylus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tcl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tcl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tcl/tcl.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tcl/tcl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/textile.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/textile/textile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/tiddlywiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/tiddlywiki.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/tiddlywiki.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/tiki.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/tiki.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/tiki.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tiki/tiki.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/toml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/toml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/toml/toml.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/toml/toml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tornado/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tornado/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tornado/tornado.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/tornado/tornado.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/troff/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/troff/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/troff/troff.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/troff/troff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn-cfg/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn-cfg/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn-cfg/ttcn-cfg.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn-cfg/ttcn-cfg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn/ttcn.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/ttcn/ttcn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/turtle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/turtle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/turtle/turtle.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/turtle/turtle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vb/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vb/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vb/vb.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vb/vb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vbscript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vbscript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vbscript/vbscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/velocity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/velocity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/velocity/velocity.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/velocity/velocity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/verilog.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/verilog/verilog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xml/xml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/xquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/xquery/xquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/yaml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/yaml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/yaml/yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/yaml/yaml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/z80/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/z80/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/z80/z80.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/mode/z80/z80.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/3024-day.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/3024-day.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/3024-night.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/3024-night.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ambiance-mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ambiance-mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ambiance.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ambiance.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/base16-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/base16-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/base16-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/base16-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/blackboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/blackboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/cobalt.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/cobalt.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/colorforth.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/colorforth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/eclipse.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/eclipse.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/elegant.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/elegant.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/erlang-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/erlang-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/lesser-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/lesser-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/liquibyte.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/liquibyte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/mbo.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/mbo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/mdn-like.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/mdn-like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/midnight.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/midnight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/neat.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/neat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/neo.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/neo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/night.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/night.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/paraiso-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/paraiso-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/paraiso-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/paraiso-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/pastel-on-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/pastel-on-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/rubyblue.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/rubyblue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/solarized.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/solarized.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/the-matrix.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/the-matrix.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/tomorrow-night-bright.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/tomorrow-night-bright.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/tomorrow-night-eighties.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/tomorrow-night-eighties.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ttcn.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/ttcn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/twilight.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/twilight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/vibrant-ink.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/vibrant-ink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/xq-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/xq-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/xq-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/xq-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/zenburn.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/codemirror/theme/zenburn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/elements/sidebar-menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/elements/sidebar-menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/fastclick/fastclick.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/fastclick/fastclick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery-ui/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery-ui/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/2.2.4/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/2.2.4/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/jquery-3.1.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/jquery-3.1.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jvectormap/jquery-jvectormap-1.2.2.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jvectormap/jquery-jvectormap-1.2.2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jvectormap/jquery-jvectormap-1.2.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/jvectormap/jquery-jvectormap-1.2.2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/slimScroll/jquery.slimscroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/slimScroll/jquery.slimscroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/slimScroll/jquery.slimscroll.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/slimScroll/jquery.slimscroll.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/sparkline/jquery.sparkline.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/sparkline/jquery.sparkline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/sparkline/jquery.sparkline.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/resources/sparkline/jquery.sparkline.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/Manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/Policy/Ip.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/Policy/Ip.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/PolicyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Access/PolicyInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/AllModels.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/AllModels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/BuilderException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/BuilderException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Path.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Path.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Cli.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Cli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Micro.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Micro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Modules.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Modules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/ProjectAware.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/ProjectAware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/ProjectBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/ProjectBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Simple.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Project/Simple.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Scaffold.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Builder/Scaffold.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/AllModels.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/AllModels.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Console.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Enumerate.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Enumerate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Info.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Migration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Migration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Scaffold.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Scaffold.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Serve.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Serve.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Webtools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Builtin/Webtools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Command.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/Command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/CommandsListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/DotPhalconMissingException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/DotPhalconMissingException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/ISelfHealingException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Commands/ISelfHealingException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Configurable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Configurable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Console/OptionParserTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Console/OptionParserTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Console/OptionStack.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Console/OptionStack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Adapter/Pdo/PdoMysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Adapter/Pdo/PdoMysql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Adapter/Pdo/PdoPostgresql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Adapter/Pdo/PdoPostgresql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Dialect/DialectMysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Dialect/DialectMysql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Dialect/DialectPostgresql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Db/Dialect/DialectPostgresql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Devtools/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Devtools/Version.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Elements/Element.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Elements/Element.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Elements/Menu/SidebarMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Elements/Menu/SidebarMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Error/AppError.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Error/AppError.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Error/ErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Error/ErrorHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/Db/UnknownColumnTypeException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/Db/UnknownColumnTypeException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/InvalidArgumentException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/InvalidParameterException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/InvalidParameterException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/ReadOnlyParameterException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/ReadOnlyParameterException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/RuntimeException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/RuntimeException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/WriteFileException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Exception/WriteFileException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/FactoryOptions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/FactoryOptions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Generator/Snippet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Generator/Snippet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Generator/Stub.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Generator/Stub.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Initializable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Initializable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Listeners/DbProfilerListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Listeners/DbProfilerListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Migrations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Controller/Base.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Controller/Base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Controller/CodemirrorTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Controller/CodemirrorTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Dispatcher/ErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Dispatcher/ErrorHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/Profiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/Profiler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesDb.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesIterator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/Model/Migration/TableAware/ListTablesIterator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/View/Engine/Volt/Extension/Php.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/View/Engine/Volt/Extension/Php.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/View/NotFoundListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Mvc/View/NotFoundListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Options/OptionsAware.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Options/OptionsAware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Resources/AssetsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Resources/AssetsResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Scanners/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Scanners/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script/Color.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script/Color.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script/ScriptException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Script/ScriptException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/DbUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/DbUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/FsUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/FsUtils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/Nullify.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/Nullify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/SystemInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Utils/SystemInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Validation/Validator/Namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Validation/Validator/Namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/IncrementalItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/IncrementalItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/ItemCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/ItemCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/ItemInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/ItemInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/TimestampedItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/TimestampedItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/VersionAwareTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Version/VersionAwareTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ControllersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ControllersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ErrorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/MigrationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/MigrationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ModelsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ModelsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ScaffoldController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/ScaffoldController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/SystemInfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Controllers/SystemInfoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/edit.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/edit.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/generate.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/generate.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/view.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/controllers/view.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route400.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route400.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route403.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route403.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route404.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route404.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route500.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/error/route500.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/index/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/index/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/base.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/base.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/error.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/error.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/webtools.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/layouts/webtools.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/generate.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/generate.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/run.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/migrations/run.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/edit.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/edit.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/generate.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/generate.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/view.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/models/view.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/content.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/content.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/content_header.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/content_header.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/custom_css.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/custom_css.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/error.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/error.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/footer.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/footer.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/header.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/header.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/inputs.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/inputs.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/sidebar.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/partials/sidebar.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/scaffold/generate.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/scaffold/generate.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/system_info/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Web/Tools/Views/system_info/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/.htrouter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/.htrouter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/variables.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/module/variables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/MainTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/MainTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/VersionTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/VersionTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/launcher" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/launcher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/cli/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/variables.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/variables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/404.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/404.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/404.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/404.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/micro/views/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/ControllerBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/ControllerBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/MainTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/MainTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/Module_cli.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/Module_cli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/Module_web.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/Module_web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/VersionTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/VersionTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/bootstrap_cli.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/bootstrap_cli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/bootstrap_web.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/bootstrap_web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/launcher" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/launcher" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services_cli.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services_cli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services_web.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/services_web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/variables.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/variables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/views/index/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/ControllerBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/ControllerBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/variables.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/variables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/views/index/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/edit.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/edit.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/edit.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/edit.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/index.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/index.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/new.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/new.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/new.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/new.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/search.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/search.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/search.volt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/scaffold/no-forms/views/search.volt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/webtools.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/templates/webtools.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_ci/environment" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_ci/environment" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_ci/setup_dbs.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_ci/setup_dbs.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.0/test_migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.0/test_migrations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.1/test_migrations.dat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.1/test_migrations.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.1/test_migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/migrations/1.0.1/test_migrations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel3.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel5.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/TestModel5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/Testmodel4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/models/files/Testmodel4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/mysql/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/mysql/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/postgresql/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/postgresql/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/projects/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/projects/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.0/test_insert_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.0/test_insert_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.1/test_insert_delete.dat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.1/test_insert_delete.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.1/test_insert_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.1/test_insert_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.2/test_insert_delete.dat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.2/test_insert_delete.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.2/test_insert_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_insert_delete/migrations/1.0.2/test_insert_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.0/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.0/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.1/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.1/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.10/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.10/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.11/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.11/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.12/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.12/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.2/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.2/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.3/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.3/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.4/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.4/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.5/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.5/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.6/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.6/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.7/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.7/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.8/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.8/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.9/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations/1.0.9/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations_back/1.0.13/test_many_running.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_many_running/migrations_back/1.0.13/test_many_running.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_table_prefix/migrations/1.0.0/issue595_1.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_table_prefix/migrations/1.0.0/issue595_1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_table_prefix/migrations/1.0.0/issue595_2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console/app/test_table_prefix/migrations/1.0.0/issue595_2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console_data/run_mysql_migration/1.0.2/test_migrations.dat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console_data/run_mysql_migration/1.0.2/test_migrations.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console_data/run_mysql_migration/1.0.2/test_migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/console_data/run_mysql_migration/1.0.2/test_migrations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/schemas/mysql/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/schemas/mysql/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/schemas/postgresql/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_data/schemas/postgresql/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_output/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_output/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/ConsoleTester.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/ConsoleTester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/FunctionalTester.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/FunctionalTester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Console.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Db/Dialect/PostgresqlTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Db/Dialect/PostgresqlTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Functional.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Functional.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Unit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Unit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Utils/NullifyTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Helper/Utils/NullifyTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Module/UnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/Module/UnitTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/UnitTester.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/UnitTester.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/_generated/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/_generated/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/_support/helpers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console.suite.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateDryVerboseMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateDryVerboseMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateMultyModelsCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateMultyModelsCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateMysqlMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateMysqlMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GeneratePostgresqlMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GeneratePostgresqlMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateProjectCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateProjectCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateScaffoldCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateScaffoldCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateSingleModelCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateSingleModelCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateTablePrefixMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/GenerateTablePrefixMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunDryVerboseMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunDryVerboseMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMultipleMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMultipleMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMysqlMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunMysqlMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunPostgresqlMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunPostgresqlMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunTablePrefixMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunTablePrefixMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunUpDownMigrationCept.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/RunUpDownMigrationCept.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/_bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/console/_bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/functional.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/functional.suite.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/functional/_bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/functional/_bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/phpstan.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/phpstan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/shim.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/shim.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit.suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit.suite.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Console/OptionStackTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Console/OptionStackTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Db/Adapter/Pdo/PostgresqlTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Db/Adapter/Pdo/PostgresqlTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Mvc/Model/Migration/TableAware/ListTablesDbTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Mvc/Model/Migration/TableAware/ListTablesDbTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Mvc/Model/Migration/TableAware/ListTablesIteratorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Mvc/Model/Migration/TableAware/ListTablesIteratorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/ServeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/ServeTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Utils/NullifyTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/Utils/NullifyTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/UtilsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/UtilsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/_bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/tests/unit/_bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phalcon/devtools/webtools.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phalcon/devtools/webtools.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ConferenciaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="164">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
               <folding>
-                <element signature="e#7#22#0#PHP" expanded="true" />
+                <element signature="e#7#27#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/library/Barcode.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/AbstractService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="187">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/conferencia/executar.phtml">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="187">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/services/ConferenciaService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3131">
+              <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/library/ConnectorOracle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="628">
+              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -81,29 +801,58 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/views/index/index.phtml" />
-        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
         <option value="$PROJECT_DIR$/app/views/conferencia/index.phtml" />
         <option value="$PROJECT_DIR$/app/views/conferencia/executar.phtml" />
-        <option value="$PROJECT_DIR$/app/config/config.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/library/Oracle.phtml" />
-        <option value="$PROJECT_DIR$/app/controllers/ConferenciaController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$APPLICATION_CONFIG_DIR$/Composer Log/Composer Log.composerLog" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/app/config/loader.php" />
+        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
+        <option value="$PROJECT_DIR$/app/library/Math.php" />
+        <option value="$PROJECT_DIR$/app/library/ConnectorOracle.php" />
+        <option value="$PROJECT_DIR$/app/library/Barcode.php" />
+        <option value="$PROJECT_DIR$/app/services/AbstractService.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ConferenciaController.php" />
+        <option value="$PROJECT_DIR$/app/services/ConferenciaService.php" />
+        <option value="$PROJECT_DIR$/app/config/config.php" />
       </list>
     </option>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="phalcon.coletor" id="75c6f279-6fc7-4f23-928c-db4205702cc3" name="Phalcon" />
+    </servers>
   </component>
   <component name="PhpTemplates">
     <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="39" />
-    <option name="y" value="162" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phalcon/devtools" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1551" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -113,13 +862,37 @@
         <subPane>
           <expand>
             <path>
-              <item name="coletor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="coletor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coletor" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="phalcon-coletor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="phalcon-coletor" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,9 +904,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dumpAutoload C:/wamp64/www/phalcon-coletor/composer.json" value="--no-interaction --ansi --verbose --classmap-authoritative" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\phalcon-coletor\app" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -147,6 +934,17 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" server_name="Phalcon">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" nameIsGenerated="true" server_name="Phalcon">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="Phalcon">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -158,39 +956,71 @@
       <option name="presentableId" value="Default" />
       <updated>1576246595880</updated>
       <workItem from="1576246597586" duration="17248000" />
+      <workItem from="1576507219174" duration="655000" />
+      <workItem from="1576507916917" duration="28156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17248000" />
+    <option name="totallyTimeSpent" value="46059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="0" width="1551" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17639168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934355" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32822758" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/services/ConferenciaService.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>$param = \ConnectorOracle::getInstance()-&gt;query($sql)-&gt;fetchAll()[0]['DSC_VALOR_PARAMETRO'];</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>\ConnectorOracle::getInstance()-&gt;query($sql)-&gt;fetchAll()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>\ConnectorOracle::getInstance()-&gt;query($sql)-&gt;fetchArray()</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.htaccess">
@@ -216,30 +1046,67 @@
         <state relative-caret-position="-12" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/conferencia/index.volt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.phtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index/index.phtml">
+    <entry file="file://$PROJECT_DIR$/app/views/conferencia/index.volt" />
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="-825">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/app/library/Oracle.phtml" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding>
+            <element signature="e#7#30#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phalcon/devtools/scripts/Phalcon/Resources/AssetsResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/conferencia/--executar.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -250,78 +1117,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="6" lean-forward="true" selection-start-line="73" selection-start-column="6" selection-end-line="73" selection-end-column="6" />
-          <folding>
-            <element signature="e#7#30#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/conferencia/executar.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/app/views/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="56" lean-forward="true" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/library/Oracle.phtml">
+    <entry file="file://$PROJECT_DIR$/app/views/index.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/conferencia/--executar.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#1166#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache/c__wamp64_www_coletor_app_views_conferencia_index.volt.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/simple/ControllerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phalcon/devtools/templates/project/modules/ControllerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/library/Math.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/library/ConnectorOracle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/library/Barcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/AbstractService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ConferenciaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="164">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding>
-            <element signature="e#7#22#0#PHP" expanded="true" />
+            <element signature="e#7#27#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/services/ConferenciaService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="-3131">
+          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="518" column="45" selection-start-line="518" selection-start-column="45" selection-end-line="518" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="1309" column="55" lean-forward="true" selection-start-line="1309" selection-start-column="55" selection-end-line="1309" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>

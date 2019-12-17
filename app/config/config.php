@@ -5,6 +5,7 @@
  */
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
+date_default_timezone_set('America/Fortaleza');
 
 return new \Phalcon\Config([
     'database' => [
@@ -23,6 +24,7 @@ return new \Phalcon\Config([
         'viewsDir'       => APP_PATH . '/views/',
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
+        'servicesDir'    => APP_PATH . '/services/',
         'cacheDir'       => BASE_PATH . '/cache/',
         'baseUri'        => '/',
     ]

@@ -8,10 +8,5 @@
             "name": "tarcisiocms",
             "email": "tarcisiocms@outlook.com"
         }
-    ],
-    "autoload": {
-        "psr-4" : {
-            "Library\\" : "/../app/library"
-        }
-    }
+    ]
 }

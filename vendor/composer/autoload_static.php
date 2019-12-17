@@ -23,6 +23,7 @@ class ComposerStaticInit66b41b3dee5fae7cad255a6859cc056c
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
+            'Services\\' => 9,
         ),
         'P' => 
         array (
@@ -63,6 +64,10 @@ class ComposerStaticInit66b41b3dee5fae7cad255a6859cc056c
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/services',
+        ),
         'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
@@ -81,7 +86,7 @@ class ComposerStaticInit66b41b3dee5fae7cad255a6859cc056c
         ),
         'Library\\' => 
         array (
-            0 => '/app/library',
+            0 => __DIR__ . '/../..' . '/app/library',
         ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
