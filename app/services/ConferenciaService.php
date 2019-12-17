@@ -395,10 +395,10 @@ class ConferenciaService extends AbstractService
                      ) VALUES (
                        $idOs,
                        TO_DATE('$dthOs', 'DD/MM/YYYY HH24:MI:SS'),
-                       ".Atividade::EMBALAGEM_EXPEDICAO.",
+                       18,
                        'Embalamento no Checkout',
                        $idPessoa,
-                       '".OrdemServico::MANUAL."',
+                       'M',
                        $idExpedicao
                      )";
         $this->conn->executeQuery($sql);
