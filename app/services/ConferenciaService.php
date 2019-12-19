@@ -30,7 +30,7 @@ class ConferenciaService extends AbstractService
             $idMapaSepEmb = "NULL";
             if (!empty($codPessoa)) {
                 $sql = "SELECT * FROM MAPA_SEPARACAO_EMB_CLIENTE WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa ORDER BY COD_MAPA_SEPARACAO_EMB_CLIENTE DESC";
-                $mapaSeparacaoEmbalado = $this->_em->getConnection()->query($sql)->fetch();
+                $mapaSeparacaoEmbalado = $this->conn->query($sql)->fetchAll();
                 if (empty($mapaSeparacaoEmbalado)) {
                     $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
                     $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);

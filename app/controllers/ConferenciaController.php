@@ -8,6 +8,9 @@ class ConferenciaController extends ControllerBase
 {
     public function executarAction()
     {
+        $vetRetorno = array('retorno' => array('resposta' => 'success', 'message' => "Cheguei", 'produto' => null, 'volumePatrimonio' => ""));
+        $this->jsonResponse($vetRetorno);
+        exit;
         try {
             $idMapa = $this->request->getPost("idMapa");
             $qtd = $this->request->getPost("qtd");
@@ -27,23 +30,6 @@ class ConferenciaController extends ControllerBase
             );
             $msg['msg'] = "";
             $volume = "";
-
-            /*$idMapa = 1211736;
-            $qtd = 1;
-            $codBarras = '7897181939044';
-            $lote = null;
-            $codPessoa = null;
-            $idExpedicao = 17725;
-            $osId = 32975;
-            $idVolume = null;
-            $checkout = false;
-            $uniqId = "(5786556751)#*%*05609679680";
-            $cpfConf = explode("#*%*", $uniqId)[1];
-            $paramsModeloSeparacao = array(
-                'tipoDefaultEmbalado' => "P",
-                'utilizaQuebra' => false,
-                'utilizaVolumePatrimonio' => false
-            );*/
 
             $codBarras = Barcode::adequaCodigoBarras($codBarras);
             /** @var ConferenciaService $confService */

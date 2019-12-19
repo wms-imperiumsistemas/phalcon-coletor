@@ -11,7 +11,7 @@ return new \Phalcon\Config([
     'database' => [
         //'adapter'     => 'Oracle',
         //'host'        => 'localhost',
-        'username'    => 'wms_lojao',
+        'username'    => 'username',
         'password'    => 'wms_adm',
         'dbname'      => '(DESCRIPTION = (ADDRESS_LIST =(LOAD_BALANCE=ON) (FAILOVER=ON) (ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA =(SID  = xe)(FAILOVER_MODE = (TYPE=SELECT)(METHOD=PRECONNECT))))',
         'charset'     => 'utf8',
