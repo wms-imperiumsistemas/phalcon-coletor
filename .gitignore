@@ -1,5 +1,4 @@
 vendor/
 .phalcon/
 cache/
-config/config.php
 .idea/

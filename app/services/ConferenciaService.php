@@ -24,7 +24,6 @@ class ConferenciaService extends AbstractService
                 'lote' => $lote
             );
 
-
             $conferencia = $this->conferenciaAlternativa($parametrosConferencia,$paramsModeloSeparaco);
 
             $idMapaSepEmb = "NULL";
@@ -96,11 +95,7 @@ class ConferenciaService extends AbstractService
             throw $e;
         }
 
-        //$this->getEntityManager()->flush();
-
-
         return true;
-
     }
 
     public function conferenciaAlternativa($dadosConferencia, $paramsModeloSeparacao, $checkout = false)
@@ -113,8 +108,6 @@ class ConferenciaService extends AbstractService
         $qtd = $dadosConferencia['qtd'];
         $codPessoa = $dadosConferencia['codPessoa'];
         $lote = (!empty($dadosConferencia['lote']) && $dadosConferencia['lote'] != $ncl) ? $dadosConferencia['lote'] : null ;
-
-
 
         $utilizaQuebra = $paramsModeloSeparacao['utilizaQuebra'];
         $tipoDefaultEmbalado = $paramsModeloSeparacao['tipoDefaultEmbalado'];

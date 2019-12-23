@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/teste.htaccess2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/ConferenciaService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ConferenciaService.php" afterDir="false" />
     </list>
@@ -135,6 +132,9 @@
       <workItem from="1576685888723" duration="2888000" />
       <workItem from="1576706407322" duration="1224000" />
       <workItem from="1576728089503" duration="1682000" />
+      <workItem from="1576865567899" duration="614000" />
+      <workItem from="1577106088093" duration="54000" />
+      <workItem from="1577106231012" duration="4642000" />
     </task>
     <servers />
   </component>
@@ -142,10 +142,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576728092489">
+    <state x="1600" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577106136876">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1576728092489" />
+    <state x="1600" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577106136876" />
+    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1577106895805">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577106895805" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">

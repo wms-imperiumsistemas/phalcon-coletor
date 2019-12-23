@@ -8,9 +8,6 @@ class ConferenciaController extends ControllerBase
 {
     public function executarAction()
     {
-        $vetRetorno = array('retorno' => array('resposta' => 'success', 'message' => "Cheguei", 'produto' => null, 'volumePatrimonio' => ""));
-        $this->jsonResponse($vetRetorno);
-        exit;
         try {
             $idMapa = $this->request->getPost("idMapa");
             $qtd = $this->request->getPost("qtd");
@@ -50,6 +47,5 @@ class ConferenciaController extends ControllerBase
             $this->jsonResponse(["status" => "Error", "retorno" => ['resposta' => 'error', 'message' => $e->getMessage(), 'produto' => '', 'volumePatrimonio' => '']]);
         }
     }
-
 }
 
