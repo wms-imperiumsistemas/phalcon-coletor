@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/ConferenciaService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ConferenciaService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
       <workItem from="1576728089503" duration="1682000" />
       <workItem from="1576865567899" duration="614000" />
       <workItem from="1577106088093" duration="54000" />
-      <workItem from="1577106231012" duration="4642000" />
+      <workItem from="1577106231012" duration="4864000" />
     </task>
     <servers />
   </component>
