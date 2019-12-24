@@ -34,11 +34,11 @@ class ConferenciaService extends AbstractService
                     $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
                     $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);
                 } else {
-                    if (in_array($mapaSeparacaoEmbalado['COD_STATUS'], [569, 570])) {
+                    if (in_array($mapaSeparacaoEmbalado[0]['COD_STATUS'], [569, 570])) {
                         $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
                         $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);
                     } else {
-                        $idMapaSepEmb = $mapaSeparacaoEmbalado['COD_MAPA_SEPARACAO_EMB_CLIENTE'];
+                        $idMapaSepEmb = $mapaSeparacaoEmbalado[0]['COD_MAPA_SEPARACAO_EMB_CLIENTE'];
                     }
                 }
             } else {
