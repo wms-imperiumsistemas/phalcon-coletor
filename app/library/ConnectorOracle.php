@@ -33,6 +33,11 @@ class ConnectorOracle
             self::$__dataBaseConf->dbname);
     }
 
+    public function getConnection()
+    {
+        return self::getInstance()->conn;
+    }
+
     public function query($sql = "", $params = [])
     {
         if (empty($sql)) throw new \Exception("The SQL string cannot be empty ");
@@ -47,27 +52,27 @@ class ConnectorOracle
     {
         if (empty($this->stmt)) throw new \Exception("The query statement is not be defined");
         if ($this->queryState === 1) {
-            oci_execute($this->stmt);
+            oci_execute($this->stmt, OCI_NO_AUTO_COMMIT);
             $this->queryState = 2;
         }
 
         return $this;
     }
 
-    public function executeQuery($sql)
+    public function fetchFirstResult()
     {
-        $this->stmt = oci_parse($this->conn, $sql);
-        return oci_execute($this->stmt);
+        $res = self::fetchAll(1);
+        return (!empty($res))? $res[0] : null;
     }
 
-    public function fetchAll()
+    public function fetchAll($maxRows = null)
     {
         if (empty($this->stmt)) throw new \Exception("The query statement is not be defined");
         if ($this->queryState === 1) {
             oci_execute($this->stmt);
             $this->queryState = 2;
         }
-        oci_fetch_all($this->stmt, $res, null, null, OCI_FETCHSTATEMENT_BY_ROW);
+        oci_fetch_all($this->stmt, $res, null, $maxRows, OCI_FETCHSTATEMENT_BY_ROW);
         return $res;
     }
 
@@ -79,5 +84,20 @@ class ConnectorOracle
             $this->queryState = 2;
         }
         return oci_fetch_array($this->stmt);
+    }
+
+    public function commit()
+    {
+        $conn = self::getConnection();
+        $r = oci_commit($conn);
+        if (!$r) {
+            $e = oci_error($conn);
+            throw new Exception($e['message']);
+        }
+    }
+
+    public function rollback()
+    {
+        oci_rollback(self::getConnection());  // rollback changes to both tables
     }
 }

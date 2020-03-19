@@ -3,6 +3,7 @@
 namespace Services;
 
 use Library\Math;
+use Wms\Domain\Entity\Expedicao\EtiquetaSeparacao;
 
 class ConferenciaService extends AbstractService
 {
@@ -29,16 +30,16 @@ class ConferenciaService extends AbstractService
             $idMapaSepEmb = "NULL";
             if (!empty($codPessoa)) {
                 $sql = "SELECT * FROM MAPA_SEPARACAO_EMB_CLIENTE WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa ORDER BY COD_MAPA_SEPARACAO_EMB_CLIENTE DESC";
-                $mapaSeparacaoEmbalado = $this->conn->query($sql)->fetchAll();
+                $mapaSeparacaoEmbalado = $this->conn->query($sql)->fetchFirstResult();
                 if (empty($mapaSeparacaoEmbalado)) {
                     $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
                     $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);
                 } else {
-                    if (in_array($mapaSeparacaoEmbalado[0]['COD_STATUS'], [569, 570])) {
+                    if (in_array($mapaSeparacaoEmbalado['COD_STATUS'], [569, 570])) {
                         $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
                         $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);
                     } else {
-                        $idMapaSepEmb = $mapaSeparacaoEmbalado[0]['COD_MAPA_SEPARACAO_EMB_CLIENTE'];
+                        $idMapaSepEmb = $mapaSeparacaoEmbalado['COD_MAPA_SEPARACAO_EMB_CLIENTE'];
                     }
                 }
             } else {
@@ -91,7 +92,9 @@ class ConferenciaService extends AbstractService
                 ";
                 $this->conn->query($sql)->execute();
             }
+            $this->conn->commit();
         } catch (\Exception $e) {
+            $this->conn->rollback();
             throw $e;
         }
 
@@ -318,10 +321,12 @@ class ConferenciaService extends AbstractService
 
     public function saveMapaEmb($idMapa, $codPessoa, $os)
     {
-        $idEmbalado = $this->conn->query("SELECT SQ_MAPA_SEPARACAO_EMBALADO_01.nextval ID_EMBALADO FROM DUAL")->fetchAll()[0]['ID_EMBALADO'];
+        $idEmbalado = "14". $this->conn->query("SELECT SQ_MAPA_SEPARACAO_EMBALADO_01.nextval ID_EMBALADO FROM DUAL")->fetchFirstResult()['ID_EMBALADO'];
         $sequencia = $this->conn->query("SELECT (NVL(MAX(NUM_SEQUENCIA), 0) + 1) AS SEQ 
                                    FROM MAPA_SEPARACAO_EMB_CLIENTE 
-                                   WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa")->fetch()[0]['SEQ'];
+                                   WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa")->fetchFirstResult()['SEQ'];
+
+        var_dump($sequencia);
 
         $sql = "INSERT INTO MAPA_SEPARACAO_EMB_CLIENTE 
                    (COD_MAPA_SEPARACAO_EMB_CLIENTE, 
@@ -352,17 +357,16 @@ class ConferenciaService extends AbstractService
         $pessoa = self::getPessoaByCpf($cpfEmbalador);
         if (empty($pessoa)) throw new \Exception("Nenhum usuário encontrado com esse CPF: $cpfEmbalador");
 
-        $idPessoa = $pessoa[0]['COD_PESSOA'];
+        $idPessoa = $pessoa['COD_PESSOA'];
         $sql = "SELECT * FROM ORDEM_SERVICO WHERE COD_PESSOA = $idPessoa AND COD_ATIVIDADE = 18 AND COD_EXPEDICAO = $idExpedicao AND DTH_FINAL_ATIVIDADE IS NULL";
 
-        $idOs = $this->conn->query($sql)->fetchAll()[0];
+        $os = $this->conn->query($sql)->fetchFirstResult();
 
-        if (!empty($idOs)) {
-            return $idOs['COD_OS'];
+        if (!empty($os)) {
+            return $os['COD_OS'];
         }
 
         if ($cine) {
-            //return self::addNewOsEmbalagem($idPessoa, $idExpedicao);
             return self::addNewOsEmbalagemHardCode($idPessoa, $idExpedicao);
         }
 
@@ -374,7 +378,7 @@ class ConferenciaService extends AbstractService
     {
 
         $dthOs = (new \DateTime())->format("d/m/Y H:i:s");
-        $idOs = $this->conn->query("SELECT SQ_ORDEM_SERVICO_01.nextval ID_OS FROM DUAL")->fetchAll()[0]['ID_OS'];
+        $idOs = $this->conn->query("SELECT SQ_ORDEM_SERVICO_01.nextval ID_OS FROM DUAL")->fetchFirstResult()['ID_OS'];
 
         $sql = "INSERT INTO ORDEM_SERVICO 
                     (
@@ -394,7 +398,7 @@ class ConferenciaService extends AbstractService
                        'M',
                        $idExpedicao
                      )";
-        $this->conn->executeQuery($sql);
+        $this->conn->query($sql)->execute();
 
         return $idOs;
     }
@@ -407,6 +411,6 @@ class ConferenciaService extends AbstractService
                 INNER JOIN PESSOA_FISICA PF ON PF.COD_PESSOA = P.COD_PESSOA
                 WHERE PF.NUM_CPF = '$cpf'";
 
-        return $this->conn->query($sql)->fetchAll();
+        return $this->conn->query($sql)->fetchFirstResult();
     }
 }

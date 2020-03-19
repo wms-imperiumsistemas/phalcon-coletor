@@ -19,7 +19,7 @@ class ConferenciaController extends ControllerBase
             $idVolume = $this->request->getPost("idVolume");
             $checkout = $this->request->getPost("chekcout");
             $uniqId = $this->request->getPost("identfier-conf");
-            $cpfConf = explode("#*%*", $uniqId)[1];
+            $cpfConf = strrev(explode("#*%*", $uniqId)[1]);
             $paramsModeloSeparacao = array(
                 'tipoDefaultEmbalado' => $this->request->getPost("tipoDefaultEmbalado"),
                 'utilizaQuebra' => $this->request->getPost("utilizaQuebra"),
