@@ -44,7 +44,7 @@ Class Math
         $y = strval($y);
 
         $quantidade = self::maiorPrecisao($x,$y);
-
+        
         $x = $x * $quantidade;
         $y = $y * $quantidade;
 
@@ -82,7 +82,7 @@ Class Math
     {
         $x = strval($x);
         $y = strval($y);
-
+        
         $quantidade = self::maiorPrecisao($x,$y);
 
         $x = strval($x * $quantidade);
@@ -95,7 +95,7 @@ Class Math
     {
         $x = strval($x);
         $y = strval($y);
-
+        
         $quantidade = self::maiorPrecisao($x,$y);
 
         $x = strval($x * $quantidade);
@@ -108,7 +108,7 @@ Class Math
     {
         $x = strval($x);
         $y = strval($y);
-
+        
         $quantidade = self::maiorPrecisao($x,$y);
 
         $x = strval($x * $quantidade);

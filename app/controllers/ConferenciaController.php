@@ -28,15 +28,18 @@ class ConferenciaController extends ControllerBase
             $msg['msg'] = "";
             $volume = "";
 
+            $$cpfEmbalador = $this->request->getPost("cpfEmbalador");
+            $cpfEmbalador = str_replace(array('.', '-'), '', $cpfEmbalador);
+
             $codBarras = Barcode::adequaCodigoBarras($codBarras);
             /** @var ConferenciaService $confService */
             $confService = AbstractService::getService("Conferencia");
             $result = $confService->confereMapaProduto($paramsModeloSeparacao, $idExpedicao, $idMapa, $codBarras, $qtd, null, $cpfConf, $codPessoa, $osId, false, $lote);
 
-            if(isset($result['checkout'])){
+            if (isset($result['checkout'])) {
                 $msg['msg'] = 'checkout';
                 $msg['produto'] = $result['produto'];
-            }else{
+            } else {
                 $msg['msg'] = 'Quantidade conferida com sucesso';
                 $msg['produto'] = $result['produto'];
             }

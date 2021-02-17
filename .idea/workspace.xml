@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/library/Math.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/library/Math.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/ConferenciaService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ConferenciaService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,14 +65,16 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dumpAutoload C:/wamp64/www/phalcon-coletor/composer.json" value="--no-interaction --ansi --verbose --classmap-authoritative" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +85,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -112,6 +118,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -134,21 +141,12 @@
       <workItem from="1577106088093" duration="54000" />
       <workItem from="1577106231012" duration="5637000" />
       <workItem from="1577145187258" duration="344000" />
+      <workItem from="1613590739579" duration="3985000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1600" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577106136876">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1600" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577106136876" />
-    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1577106895805">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1615" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1577106895805" />
+    <option name="version" value="3" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
