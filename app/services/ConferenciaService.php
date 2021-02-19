@@ -3,14 +3,11 @@
 namespace Services;
 
 use Library\Math;
-use Wms\Domain\Entity\Expedicao\EtiquetaSeparacao;
-use Wms\Domain\Entity\Produto;
-use Wms\Domain\Entity\Produto\Embalagem;
-use Wms\Domain\Entity\Produto\Lote;
 
 class ConferenciaService extends AbstractService
 {
-    public function confereMapaProduto($paramsModeloSeparaco, $idExpedicao, $idMapa, $codBarras, $qtd, $volumePatrimonioEn, $cpfEmbalador, $codPessoa = null, $ordemServicoId = null, $checkout = false, $lote = Lote::NCL) {
+    public function confereMapaProduto($paramsModeloSeparaco, $idExpedicao, $idMapa, $codBarras, $qtd, $volumePatrimonioEn, $cpfEmbalador, $codPessoa = null, $ordemServicoId = null, $checkout = false, $lote = Lote::NCL)
+    {
 
         try {
             $idVolumePatrimonio = null;
@@ -28,7 +25,7 @@ class ConferenciaService extends AbstractService
                 'lote' => $lote
             );
 
-            list($conferencia, $tudoConferido) = $this->validaConferenciaMapaProduto($parametrosConferencia,$paramsModeloSeparaco);
+            list($conferencia, $tudoConferido) = $this->validaConferenciaMapaProduto($parametrosConferencia, $paramsModeloSeparaco, $checkout);
 
             $idMapaSepEmb = "NULL";
             if (!empty($codPessoa)) {
@@ -36,7 +33,7 @@ class ConferenciaService extends AbstractService
                 $mapaSeparacaoEmbalado = $this->conn->query($sql)->fetchFirstResult();
                 if (empty($mapaSeparacaoEmbalado)) {
                     $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
-                    $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa,  $osEmbalamento);
+                    $idMapaSepEmb = self::saveMapaEmb($idMapa, $codPessoa, $osEmbalamento);
                 } else {
                     if (in_array($mapaSeparacaoEmbalado['COD_STATUS'], [569, 570])) {
                         $osEmbalamento = self::getOsMapaConfEmbalagem($cpfEmbalador, $idExpedicao, true);
@@ -53,8 +50,8 @@ class ConferenciaService extends AbstractService
 
             foreach ($conferencia as $conf) {
 
-                $idVolume = (!empty($conf['codPrdutoVolume']))? $conf['codPrdutoVolume'] : 'NULL';
-                $idEmbalagem = (!empty($conf['codProdutoEmbalagem']))? $conf['codProdutoEmbalagem'] : 'NULL';
+                $idVolume = (!empty($conf['codPrdutoVolume'])) ? $conf['codPrdutoVolume'] : 'NULL';
+                $idEmbalagem = (!empty($conf['codProdutoEmbalagem'])) ? $conf['codProdutoEmbalagem'] : 'NULL';
 
                 $sql = "
                     INSERT INTO MAPA_SEPARACAO_CONFERENCIA 
@@ -118,7 +115,7 @@ class ConferenciaService extends AbstractService
         $codBarras = $dadosConferencia['codBarras'];
         $qtd = $dadosConferencia['qtd'];
         $codPessoa = $dadosConferencia['codPessoa'];
-        $lote = (!empty($dadosConferencia['lote']) && $dadosConferencia['lote'] != $ncl) ? $dadosConferencia['lote'] : null ;
+        $lote = (!empty($dadosConferencia['lote']) && $dadosConferencia['lote'] != $ncl) ? $dadosConferencia['lote'] : null;
 
         $utilizaQuebra = $paramsModeloSeparacao['utilizaQuebra'];
         $tipoDefaultEmbalado = $paramsModeloSeparacao['tipoDefaultEmbalado'];
@@ -143,7 +140,7 @@ class ConferenciaService extends AbstractService
         $SQLJoin = "";
         if ($tipoDefaultEmbalado != "P") {
             $SQLFields = " PEP.QTD_EMBALAGEM as QTD_EMBALAGEM_PADRAO, ";
-            $SQLJoin   = " LEFT JOIN PRODUTO_EMBALAGEM PEP ON PEP.COD_PRODUTO = MSP.COD_PRODUTO AND PEP.DSC_GRADE = MSP.DSC_GRADE AND PEP.IND_PADRAO = 'S'";
+            $SQLJoin = " LEFT JOIN PRODUTO_EMBALAGEM PEP ON PEP.COD_PRODUTO = MSP.COD_PRODUTO AND PEP.DSC_GRADE = MSP.DSC_GRADE AND PEP.IND_PADRAO = 'S'";
         }
 
         //QUERY PRINCIPAL PARA VALIDAÇÃO DE CONFERENCIA
@@ -204,7 +201,10 @@ class ConferenciaService extends AbstractService
         $result = $this->conn->query($SQL)->fetchAll();
 
         if (count($result) == 0) {
-            $produto= $this->getProdutoByCodBarras($codBarras);
+            $produto = $this->getProdutoByCodBarras($codBarras);
+            if (empty($produto))
+                throw new \Exception("Nenhum produto vinculado à esse código de barras $codBarras");
+
             $msgErro = "O Produto " . $produto['DSC_PRODUTO'] . " não pertence ";
             if ($codPessoa != null) {
                 $msgErro .= " ao cliente selecionado";
@@ -266,7 +266,7 @@ class ConferenciaService extends AbstractService
             if (Math::compare($qtdRestante, $qtdPendenteConferenciaMapa, "<=")) {
                 $qtdConferir = $qtdRestante;
             } else {
-                $qtdConferir = (!$checkout) ? $qtdPendenteConferenciaMapa: $qtdRestante ;
+                $qtdConferir = (!$checkout) ? $qtdPendenteConferenciaMapa : $qtdRestante;
             }
 
             $qtdConferidoToCheckout = null;
@@ -286,7 +286,7 @@ class ConferenciaService extends AbstractService
                     'codPrdutoVolume' => $codProdutoVolume,
                     'qtdEmbalagem' => $fatorCodBarrasBipado,
                     'quantidade' => Math::dividir($qtdConferir, $fatorCodBarrasBipado),
-                    'lote' => (!empty($lote))? $lote : $ncl,
+                    'lote' => (!empty($lote)) ? $lote : $ncl,
                     'qtdConferidaCheckout' => $qtdConferidoToCheckout
                 );
 
@@ -311,7 +311,7 @@ class ConferenciaService extends AbstractService
                 }
             }
             throw new \Exception($msgErro);
-        } elseif (Math::compare($qtdInformada, Math::subtrair($qtdMapaTotal,$qtdConferidoTotal), '>')) {
+        } elseif (Math::compare($qtdInformada, Math::subtrair($qtdMapaTotal, $qtdConferidoTotal), '>')) {
             throw new \Exception("A quantidade de $qtdInformada excede o solicitado!");
         }
 
@@ -341,7 +341,7 @@ class ConferenciaService extends AbstractService
 
     public function saveMapaEmb($idMapa, $codPessoa, $os)
     {
-        $idEmbalado = "14". $this->conn->query("SELECT SQ_MAPA_SEPARACAO_EMBALADO_01.nextval ID_EMBALADO FROM DUAL")->fetchFirstResult()['ID_EMBALADO'];
+        $idEmbalado = "14" . $this->conn->query("SELECT SQ_MAPA_SEPARACAO_EMBALADO_01.nextval ID_EMBALADO FROM DUAL")->fetchFirstResult()['ID_EMBALADO'];
         $sequencia = $this->conn->query("SELECT (NVL(MAX(NUM_SEQUENCIA), 0) + 1) AS SEQ 
                                    FROM MAPA_SEPARACAO_EMB_CLIENTE 
                                    WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa")->fetchFirstResult()['SEQ'];
@@ -460,7 +460,7 @@ class ConferenciaService extends AbstractService
         $sqlEmbalagens = "SELECT * FROM PRODUTO_EMBALAGEM WHERE COD_PRODUTO = '$codProduto' AND DSC_GRADE = '$grade' 
                                   AND DTH_INATIVACAO IS NULL ORDER BY QTD_EMBALAGEM DESC";
 
-        $embalagens = $this->conn->query($sqlEmbalagens)->fetchArray();
+        $embalagens = $this->conn->query($sqlEmbalagens)->fetchAll();
         $qtdRestante = $qtd;
         $unidFracao = null;
         $return = $qtd;
@@ -474,9 +474,10 @@ class ConferenciaService extends AbstractService
                     $embFracDefault = $embalagem;
                     if (empty($unidFracao)) {
                         $sqlProd = "SELECT UNID_FRACAO FROM PRODUTO WHERE COD_PRODUTO = '$codProduto' AND DSC_GRADE = '$grade' ";
-                        $unidFracao = ($this->conn->query($sqlProd)->fetchFirstResult())['UNID_FRACAO'];
+                        $unidFracao = $this->conn->query($sqlProd)->fetchFirstResult()['UNID_FRACAO'];
                     }
                 }
+
                 $qtdEmbalagem = $embalagem['QTD_EMBALAGEM'];
                 if (Math::compare(abs($qtdRestante), abs($qtdEmbalagem), '>=')) {
                     $resto = Math::resto($qtdRestante, $qtdEmbalagem);
@@ -485,7 +486,7 @@ class ConferenciaService extends AbstractService
                     if ($array === 0) {
                         if ($embalagem['DSC_EMBALAGEM'] != null) {
                             if ($embalagem['IS_EMB_FRACIONAVEL_DEFAULT'] != "S") {
-                                $fatorEmb = $embalagem['DSC_EMBALAGEM']. "(" . $embalagem['QTD_EMBALAGEM'] . ")";
+                                $fatorEmb = $embalagem['DSC_EMBALAGEM'] . "(" . $embalagem['QTD_EMBALAGEM'] . ")";
                             } else {
                                 $fatorEmb = $listaUnidadeMedida[$unidFracao] . "'s";
                             }
@@ -503,7 +504,8 @@ class ConferenciaService extends AbstractService
                         $arrayQtds[$key]['qtdEmbalagem'] = $embalagem['QTD_EMBALAGEM'];
                     }
                 } elseif ($qtd == 0) {
-                    $arrayQtds[$embalagem['COD_PRODUTO_EMBALAGEM']] = 0; break;
+                    $arrayQtds[$embalagem['COD_PRODUTO_EMBALAGEM']] = 0;
+                    break;
                 }
             }
             if (!empty($qtdRestante)) {
@@ -512,16 +514,16 @@ class ConferenciaService extends AbstractService
                     if (isset($arrayQtds[$embFracDefault['COD_PRODUTO_EMBALAGEM']])) {
                         $pref = $arrayQtds[$embFracDefault['COD_PRODUTO_EMBALAGEM']];
                         $args = explode(' ', $pref);
-                        $args[0] = Math::adicionar($args[0], $qtdRestante) ;
+                        $args[0] = Math::adicionar($args[0], $qtdRestante);
                         $arrayQtds[$embFracDefault['COD_PRODUTO_EMBALAGEM']] = implode(' ', $args);
                     } else {
                         if ($embalagem['IS_EMB_FRACIONAVEL_DEFAULT'] != "S") {
-                            $fatorEmb = $embalagem['DSC_EMBALAGEM']. "(" . $embalagem['QTD_EMBALAGEM'] . ")";
+                            $fatorEmb = $embalagem['DSC_EMBALAGEM'] . "(" . $embalagem['QTD_EMBALAGEM'] . ")";
                         } else {
                             $fatorEmb = $listaUnidadeMedida[$unidFracao] . "S";
                         }
                         if (Math::compare($qtdRestante, 1, '<')) {
-                            $qtdRestante = (float) $qtdRestante;
+                            $qtdRestante = (float)$qtdRestante;
                         }
                         $arrayQtds[$embFracDefault['COD_PRODUTO_EMBALAGEM']] = $qtdRestante . ' ' . $fatorEmb;
                     }
@@ -533,5 +535,53 @@ class ConferenciaService extends AbstractService
             $return = $arrayQtds;
         }
         return $return;
+    }
+
+    public function bloquearOsMapa($osId, $motivo)
+    {
+        $script = "UPDATE ORDEM_SERVICO SET BLOQUEIO = '$motivo', BLOQUEIO_DE = 'M' WHERE COD_OS = $osId";
+        try {
+            $this->conn->query($script)->execute();
+            $this->conn->commit();
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function salvarAndamento($observacao, $idExpedicao, $usuarioId, $codigoBarras, $idMapa)
+    {
+        $insert = "INSERT INTO EXPEDICAO_ANDAMENTO (
+                                 NUM_SEQUENCIA, 
+                                 COD_EXPEDICAO, 
+                                 COD_USUARIO, 
+                                 DTH_ANDAMENTO, 
+                                 DSC_OBSERVACAO,
+                                 COD_BARRAS_PRODUTO, 
+                                 COD_MAPA_SEPARACAO)
+                    VALUES (SQ_EXP_ANDAMENTO_01.nextval, $idExpedicao, $usuarioId, sysdate, '$observacao', $codigoBarras, $idMapa)";
+
+        try {
+            $this->conn->query($insert)->execute();
+            $this->conn->commit();
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function validaExpedicao($idExpedicao, $usuarioId, $bloqueioDeOs)
+    {
+        $sql = "SELECT COD_STATUS, IND_PROCESSANDO FROM EXPEDICAO WHERE COD_EXPEDICAO = $idExpedicao";
+        $result = $this->conn->query($sql)->fetchFirstResult();
+
+        if (!in_array($result['COD_STATUS'],[463,464]) || $result['IND_PROCESSANDO'] == 'S')
+            throw new \Exception("Esta expedição não está em condição de conferência, atualize a tela e reinicie o processo");
+
+        if ($bloqueioDeOs == 'S') {
+            $sql = "SELECT OS.BLOQUEIO FROM ORDEM_SERVICO OS WHERE COD_EXPEDICAO = $idExpedicao AND COD_PESSOA = $usuarioId";
+            $result = $this->conn->query($sql)->fetchFirstResult();
+
+            if (!empty($result['BLOQUEIO']))
+                throw new \Exception($result['BLOQUEIO']);
+        }
     }
 }

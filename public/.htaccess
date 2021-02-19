@@ -6,3 +6,5 @@ AddDefaultCharset UTF-8
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
 </IfModule>
+
+Header set Access-Control-Allow-Origin http://wms.local

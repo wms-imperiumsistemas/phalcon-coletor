@@ -1,1 +1,7 @@
 <?php
+$status = ($dbOk)? 'Ok': 'Falha';
+echo "<div> <p>Conexão com o banco: $status</p></div>";
+
+if (!$dbOk) {
+    echo "<p>Movivo: $exception</p>";
+}

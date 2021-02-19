@@ -27,10 +27,18 @@ class ConnectorOracle
 
     public function __construct()
     {
-        $this->conn = oci_connect(
+        $conn = oci_connect(
             self::$__dataBaseConf->username,
             self::$__dataBaseConf->password,
             self::$__dataBaseConf->dbname);
+
+        if (!$conn) {
+            $e = oci_error();
+            //trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+            throw new Exception($e['message']);
+        }
+
+        $this->conn = $conn;
     }
 
     public function getConnection()
