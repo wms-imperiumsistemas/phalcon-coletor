@@ -472,7 +472,7 @@ class ConferenciaService extends AbstractService
             foreach ($embalagens as $key => $embalagem) {
                 if ($embalagem['IS_EMB_FRACIONAVEL_DEFAULT'] == "S") {
                     $embFracDefault = $embalagem;
-                    if (empty($arrProduto)) {
+                    if (empty($unidFracao)) {
                         $sqlProd = "SELECT UNID_FRACAO FROM PRODUTO WHERE COD_PRODUTO = '$codProduto' AND DSC_GRADE = '$grade' ";
                         $unidFracao = ($this->conn->query($sqlProd)->fetchFirstResult())['UNID_FRACAO'];
                     }
