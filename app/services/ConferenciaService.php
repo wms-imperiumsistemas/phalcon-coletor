@@ -25,7 +25,7 @@ class ConferenciaService extends AbstractService
                 'lote' => $lote
             );
 
-            list($conferencia, $tudoConferido) = $this->validaConferenciaMapaProduto($parametrosConferencia, $paramsModeloSeparaco, $checkout);
+            $conferencia= $this->validaConferenciaMapaProduto($parametrosConferencia, $paramsModeloSeparaco, $checkout);
 
             $idMapaSepEmb = "NULL";
             if (!empty($codPessoa)) {
@@ -100,7 +100,6 @@ class ConferenciaService extends AbstractService
 
         if ($checkout) {
             $response['produto'] = $conferencia;
-            if ($tudoConferido) $response['checkout'] = 'checkout';
             return $response;
         }
 
@@ -120,6 +119,7 @@ class ConferenciaService extends AbstractService
         $utilizaQuebra = $paramsModeloSeparacao['utilizaQuebra'];
         $tipoDefaultEmbalado = $paramsModeloSeparacao['tipoDefaultEmbalado'];
         $utilizaVolumePatrimonio = $paramsModeloSeparacao['utilizaVolumePatrimonio'];
+        $exigeLote = $paramsModeloSeparacao['exigeLote'];
 
         $whereMSPEmbalado = "";
         $whereMSCEmbalado = "";
@@ -254,8 +254,18 @@ class ConferenciaService extends AbstractService
             //CASO SEJA CONFERÊNCIA DE EMBALADO NÃO SOMA AS QTDS DO MESMO ITEM DE TODOS OS MAPAS
             if (!empty($codPessoa) && $mapa['COD_MAPA_SEPARACAO'] != $idMapa) continue;
 
-            //CASO O PRODUTO CONTROLE LOTE, SÓ CALCULA O LOTE ESPECÍFICO
-            if (!empty($lote) && $mapa["DSC_LOTE"] != $lote) continue;
+            //CASO O PRODUTO CONTROLE LOTE
+            $loteRegistrar = $lote;
+            if ($mapa['IND_CONTROLA_LOTE'] == 'S') {
+                //E EXIGE NA CONFERÊNCIA, SÓ CALCULA O LOTE ESPECÍFICO
+                if ($exigeLote == 'S' && !empty($mapa["DSC_LOTE"]) && $mapa["DSC_LOTE"] != $lote) continue;
+                // SE NÃO EXIGE, O LOTE À SER REGISTRADO É O QUE ESTIVER PENDENTE DE CONFERÊNCIA
+                elseif ($exigeLote != 'S' && !empty($mapa["DSC_LOTE"]) && $mapa["DSC_LOTE"] != $lote) {
+                    $loteRegistrar = $mapa["DSC_LOTE"];
+                }
+            } elseif ($mapa['IND_CONTROLA_LOTE'] != 'S' || empty($lote)) {
+                $loteRegistrar = $ncl;
+            }
 
             $qtdMapaTotal = Math::adicionar($qtdMapaTotal, $mapa['QTD_SEPARAR']);
             $qtdConferidoTotal = Math::adicionar($qtdConferidoTotal, $mapa['QTD_CONFERIDA']);
@@ -266,13 +276,14 @@ class ConferenciaService extends AbstractService
             if (Math::compare($qtdRestante, $qtdPendenteConferenciaMapa, "<=")) {
                 $qtdConferir = $qtdRestante;
             } else {
-                $qtdConferir = (!$checkout) ? $qtdPendenteConferenciaMapa : $qtdRestante;
+                //Todo Lógica comentada para revisão, pois pode permitir conferência acima da quantidade do mapa
+                //$qtdConferir = (!$checkout) ? $qtdPendenteConferenciaMapa: $qtdRestante ;
+                $qtdConferir = $qtdPendenteConferenciaMapa ;
             }
 
             $qtdConferidoToCheckout = null;
-            $qtdToCheckout = 0;
             if ($checkout) {
-                $qtdToCheckout = Math::adicionar($qtdConferidoTotal, $qtdInformada);
+                $qtdToCheckout = Math::adicionar($mapa['QTD_CONFERIDA'], $qtdConferir);
                 $vetSeparar = $this->getQtdEmbalagensFormatada($codProduto, $dscGrade, $qtdToCheckout);
                 $qtdConferidoToCheckout = implode(' + ', $vetSeparar);
             }
@@ -286,16 +297,21 @@ class ConferenciaService extends AbstractService
                     'codPrdutoVolume' => $codProdutoVolume,
                     'qtdEmbalagem' => $fatorCodBarrasBipado,
                     'quantidade' => Math::dividir($qtdConferir, $fatorCodBarrasBipado),
-                    'lote' => (!empty($lote)) ? $lote : $ncl,
-                    'qtdConferidaCheckout' => $qtdConferidoToCheckout
+                    'lote' => $loteRegistrar,
+                    'qtdConferidaCheckout' => $qtdConferidoToCheckout,
+                    'checkout' => (Math::compare($mapa['QTD_SEPARAR'], Math::adicionar($mapa['QTD_CONFERIDA'], $qtdConferir), '=='))
                 );
 
                 $qtdRestante = Math::subtrair($qtdRestante, $qtdConferir);
             }
+
+            if (empty($qtdRestante)) break;
         }
 
-        if (Math::compare($qtdRestante, 0, ">") && !$checkout) {
-            $strLote = (!empty($lote)) ? " lote: '$lote'" : "";
+        if ((Math::compare($qtdRestante, 0, ">") && !$checkout) ||
+            Math::compare($qtdInformada, Math::subtrair($qtdMapaTotal,$qtdConferidoTotal), '>')
+        ) {
+            $strLote = (!empty($loteRegistrar)) ? " lote: '$loteRegistrar'" : "";
             throw new \Exception("A quantidade de $qtdInformada para o produto $codProduto ($dscProduto) - $dscGrade$strLote excede o solicitado!");
         }
 
@@ -311,8 +327,6 @@ class ConferenciaService extends AbstractService
                 }
             }
             throw new \Exception($msgErro);
-        } elseif (Math::compare($qtdInformada, Math::subtrair($qtdMapaTotal, $qtdConferidoTotal), '>')) {
-            throw new \Exception("A quantidade de $qtdInformada excede o solicitado!");
         }
 
         //VERIFCO SE O PRODUTO É EMBALADO E ESTA UTILIZANDO VOLUME PATRIMONIO
@@ -328,15 +342,13 @@ class ConferenciaService extends AbstractService
             }
         }
 
-
         if ($utilizaVolumePatrimonio == 'S') {
             if ((!(isset($dadosConferencia['idVolumePatrimonio'])) || ($dadosConferencia['idVolumePatrimonio'] == null)) && ($embalado == true)) {
                 throw new \Exception("O produto $codProduto / $dscGrade - $dscProduto - $dscEmbalagem é embalado");
             }
         }
 
-        //VERIFICO SE O PRODUTO JA FOI COMPELTAMENTE CONFERIDO NO MAPA OU NA EXPEDIÇÃO DE ACORDO COM O PARAMETRO DE UTILIZAR QUEBRA NA CONFERENCIA
-        return [$qtdConferenciaGravar, ($checkout && $qtdMapaTotal == $qtdToCheckout)];
+        return $qtdConferenciaGravar;
     }
 
     public function saveMapaEmb($idMapa, $codPessoa, $os)
@@ -345,8 +357,6 @@ class ConferenciaService extends AbstractService
         $sequencia = $this->conn->query("SELECT (NVL(MAX(NUM_SEQUENCIA), 0) + 1) AS SEQ 
                                    FROM MAPA_SEPARACAO_EMB_CLIENTE 
                                    WHERE COD_MAPA_SEPARACAO = $idMapa AND COD_PESSOA = $codPessoa")->fetchFirstResult()['SEQ'];
-
-        var_dump($sequencia);
 
         $sql = "INSERT INTO MAPA_SEPARACAO_EMB_CLIENTE 
                    (COD_MAPA_SEPARACAO_EMB_CLIENTE, 
