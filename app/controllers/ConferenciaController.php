@@ -38,13 +38,16 @@ class ConferenciaController extends ControllerBase
 
             $codBarras = Barcode::adequaCodigoBarras($codBarras);
             $result = $confService->confereMapaProduto($paramsModeloSeparacao, $idExpedicao, $idMapa, $codBarras, $qtd, null, $cpfEmbalador, $codPessoa, $osId, $checkout, $lote);
-            $vetRetorno = ['retorno' => [
-                'resposta' => 'success',
-                'message' => 'Quantidade conferida com sucesso',
-                'produto' => $result['produto'],
-                'volumePatrimonio' => ""
-            ]];
 
+            $volume = "";
+
+            if (isset($result['checkout'])) {
+                $msg = 'checkout';
+            } else {
+                $msg = 'Quantidade conferida com sucesso';
+            }
+
+            $vetRetorno = array('retorno' => array('resposta' => 'success', 'message' => $msg, 'produto' => $result['produto'], 'volumePatrimonio' => $volume));
             $this->jsonResponse($vetRetorno);
         } catch (Exception $e) {
             $motivo = $e->getMessage();

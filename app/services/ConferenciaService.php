@@ -25,7 +25,7 @@ class ConferenciaService extends AbstractService
                 'lote' => $lote
             );
 
-            $conferencia= $this->validaConferenciaMapaProduto($parametrosConferencia, $paramsModeloSeparaco, $checkout);
+            list($conferencia, $tudoConferido) = $this->validaConferenciaMapaProduto($parametrosConferencia, $paramsModeloSeparaco, $checkout);
 
             $idMapaSepEmb = "NULL";
             if (!empty($codPessoa)) {
@@ -100,6 +100,7 @@ class ConferenciaService extends AbstractService
 
         if ($checkout) {
             $response['produto'] = $conferencia;
+            if ($tudoConferido) $response['checkout'] = 'checkout';
             return $response;
         }
 
@@ -348,7 +349,8 @@ class ConferenciaService extends AbstractService
             }
         }
 
-        return $qtdConferenciaGravar;
+        //VERIFICO SE O PRODUTO JA FOI COMPELTAMENTE CONFERIDO NO MAPA OU NA EXPEDIÇÃO DE ACORDO COM O PARAMETRO DE UTILIZAR QUEBRA NA CONFERENCIA
+        return [$qtdConferenciaGravar, ($checkout && $qtdMapaTotal == $qtdToCheckout)];
     }
 
     public function saveMapaEmb($idMapa, $codPessoa, $os)
