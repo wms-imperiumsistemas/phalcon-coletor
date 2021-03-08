@@ -3,3 +3,4 @@ vendor/
 cache/
 app/config/config.php
 .idea/
+public/.htaccess
