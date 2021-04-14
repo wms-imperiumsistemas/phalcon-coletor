@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f898485-a5fd-42df-8f33-8f60dd8e7d2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ConferenciaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/ConferenciaService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ConferenciaService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +144,13 @@
       <workItem from="1613747138179" duration="19238000" />
       <workItem from="1614014220387" duration="1335000" />
       <workItem from="1614020729143" duration="330000" />
-      <workItem from="1614774781233" duration="3216000" />
+      <workItem from="1614774781233" duration="3312000" />
+      <workItem from="1618268814684" duration="787000" />
+      <workItem from="1618311612352" duration="11000" />
+      <workItem from="1618311636310" duration="29000" />
+      <workItem from="1618322194474" duration="16000" />
+      <workItem from="1618399838220" duration="237000" />
+      <workItem from="1618401798705" duration="1676000" />
     </task>
     <servers />
   </component>
@@ -159,6 +164,11 @@
           <url>file://$PROJECT_DIR$/app/controllers/ControllerBase.php</url>
           <line>13</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/services/ConferenciaService.php</url>
+          <line>250</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

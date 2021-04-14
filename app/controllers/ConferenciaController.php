@@ -22,7 +22,8 @@ class ConferenciaController extends ControllerBase
         $paramsModeloSeparacao = array(
             'tipoDefaultEmbalado' => $this->request->getPost("tipoDefaultEmbalado"),
             'utilizaQuebra' => $this->request->getPost("utilizaQuebra"),
-            'utilizaVolumePatrimonio' => $this->request->getPost("utilizaVolumePatrimonio")
+            'utilizaVolumePatrimonio' => $this->request->getPost("utilizaVolumePatrimonio"),
+            'exigeLote' => $this->request->getPost("exigeLote")
         );
         $cpfEmbalador = str_replace(array('.', '-'), '', $this->request->getPost("cpfEmbalador"));
 

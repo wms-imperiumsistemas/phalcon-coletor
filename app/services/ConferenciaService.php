@@ -282,8 +282,8 @@ class ConferenciaService extends AbstractService
             }
 
             $qtdConferidoToCheckout = null;
+            $qtdToCheckout = Math::adicionar($mapa['QTD_CONFERIDA'], $qtdConferir);
             if ($checkout) {
-                $qtdToCheckout = Math::adicionar($mapa['QTD_CONFERIDA'], $qtdConferir);
                 $vetSeparar = $this->getQtdEmbalagensFormatada($codProduto, $dscGrade, $qtdToCheckout);
                 $qtdConferidoToCheckout = implode(' + ', $vetSeparar);
             }
@@ -299,7 +299,7 @@ class ConferenciaService extends AbstractService
                     'quantidade' => Math::dividir($qtdConferir, $fatorCodBarrasBipado),
                     'lote' => $loteRegistrar,
                     'qtdConferidaCheckout' => $qtdConferidoToCheckout,
-                    'checkout' => (Math::compare($mapa['QTD_SEPARAR'], Math::adicionar($mapa['QTD_CONFERIDA'], $qtdConferir), '=='))
+                    'checkout' => (Math::compare($mapa['QTD_SEPARAR'], $qtdToCheckout, '=='))
                 );
 
                 $qtdRestante = Math::subtrair($qtdRestante, $qtdConferir);

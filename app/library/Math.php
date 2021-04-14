@@ -56,6 +56,8 @@ Class Math
             return $x <= $y;
         } elseif ($oper == "<") {
             return $x < $y;
+        } elseif ($oper == '==') {
+            return $x == $y;
         }
     }
 
