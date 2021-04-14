@@ -49,23 +49,23 @@ class Barcode
         }
 
         // Se o código começa com "8006", o sistema considera o código da posição 5 até 22.
-        if(substr($codigoBarras, 0, 4) == '8006') {
-            return substr($codigoBarras, 4, 18);
-        }
-        if(substr($codigoBarras, 0, 5) == '98006') {
-            return substr($codigoBarras, 6, 18);
-        }
+//        if(substr($codigoBarras, 0, 4) == '8006') {
+//            return substr($codigoBarras, 4, 18);
+//        }
+//        if(substr($codigoBarras, 0, 5) == '98006') {
+//            return substr($codigoBarras, 6, 18);
+//        }
         // Se o código começa com "0901", o sistema considera o código da posição 5 até 22.
-        if(substr($codigoBarras, 0, 4) == '0901') {
-            return substr($codigoBarras, 4, 18);
-        }
-        if(substr($codigoBarras, 0, 5) == '08006') {
-            return substr($codigoBarras, 5, 18);
-        }
+//        if(substr($codigoBarras, 0, 4) == '0901') {
+//            return substr($codigoBarras, 4, 18);
+//        }
+//        if(substr($codigoBarras, 0, 5) == '08006') {
+//            return substr($codigoBarras, 5, 18);
+//        }
         // Se o código começa com "9010", o sistema considera o código da posição 5 até 22.
-        if(substr($codigoBarras, 0, 4) == '9010') {
-            return substr($codigoBarras, 4, 18);
-        }
+//        if(substr($codigoBarras, 0, 4) == '9010') {
+//            return substr($codigoBarras, 4, 18);
+//        }
 
         // Se o código começa com "8006", o sistema considera o código da posição 5 até 22.
 //        if(substr($codigoBarras, 0, 2) == '01' || substr($codigoBarras, 0, 2) == '02') {
